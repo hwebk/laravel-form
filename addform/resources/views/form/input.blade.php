@@ -1,4 +1,4 @@
-@extedns('layouts.common')
+@extends('layouts.common')
 @section('content')
 @if(count($errors) > 0)
     <ul>
@@ -10,7 +10,7 @@
 <div class="container">
     <h2>登録フォーム画面</h2>
     
-    <form method="POST" action="{{ route('form::save') }}">
+    <form method="POST" action="">
         <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 
         <div class="form-group">
@@ -27,11 +27,11 @@
         </div>
         <div class="form-group">
             <label>お問い合わせ内容</label>
-            <textarea class="form-control" name="content" rows="4" placeholder="お問い合わせ内容を入力してください"</textarea>
+            <textarea class="form-control" name="content" rows="4" placeholder="お問い合わせ内容を入力してください"></textarea>
         </div>
         <div class="form-group">
             <div class="offset-sm-2 col-sm-10">
-                <button type="sbumit" class="btn btn-primary">確認する</button>
+                <button type="submit" class="btn btn-primary">確認する</button>
             </div>
         </div>
         <div class="form-group row">
@@ -41,5 +41,4 @@
         </div>
     </form>
 </div>
-
 @endseciton
