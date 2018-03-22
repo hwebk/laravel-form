@@ -6,6 +6,7 @@
 
 {{-- application.blade.phpの@yield('content')に以下のレイアウトを代入 --}}
 @section('content')
+    <h3>登録データの新規作成</h3>
     <form action="/articles" method="post">
         {{-- 以下を入れないとエラーになる --}}
         {{ csrf_field() }}
